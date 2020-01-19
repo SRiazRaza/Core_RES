@@ -33,7 +33,7 @@ namespace Rahman_Educational_Service
         {
             try
             {    
-                SQLConn.sqL = "SELECT td.InvoiceNo,TDate,td.ProductNo,Description,ItemPrice,SUM(TD.Quantity) as totalQuantity,Discount,perItem from transactions as t,transactiondetails as td,product as p  where p.ProductNo = td.ProductNo AND td.InvoiceNo = t.InvoiceNo AND  TDate BETWEEN '" + StartDate.ToString("MM-dd-yyyy") + "' AND '" + EndDate.ToString("MM-dd-yyyy") + "' GROUP BY TDate, td.InvoiceNo,P.ProductNo ORDER By TDate";
+                SQLConn.sqL = "SELECT td.InvoiceNo,TDate,td.ProductNo,Description,ItemPrice,SUM(TD.Quantity) as totalQuantity,Discount,perItem from transactions as t,transactiondetails as td,product as p  where p.ProductNo = td.ProductNo AND td.InvoiceNo = t.InvoiceNo AND  DATE_FORMAT(STR_TO_DATE(TDate, '%m-%d-%Y'), '%Y-%m-%d') BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.ToString("yyyy-MM-dd") + "' GROUP BY TDate, td.InvoiceNo,P.ProductNo ORDER By TDate";
 
                 SQLConn.ConnDB();
                 SQLConn.cmd = new MySqlCommand(SQLConn.sqL, SQLConn.conn);
