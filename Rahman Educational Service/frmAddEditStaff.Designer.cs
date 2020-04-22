@@ -62,8 +62,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Label3 = new System.Windows.Forms.Label();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtStreet = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtStreet = new System.Windows.Forms.MaskedTextBox();
             this.GroupBox2.SuspendLayout();
             this.GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -429,6 +429,16 @@
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Staff Information";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.GroupBox3);
+            this.panel1.Controls.Add(this.GroupBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 237);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(660, 185);
+            this.panel1.TabIndex = 9;
+            // 
             // txtStreet
             // 
             this.txtStreet.BeepOnError = true;
@@ -441,16 +451,6 @@
             this.txtStreet.TabIndex = 3;
             this.txtStreet.ValidatingType = typeof(int);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.GroupBox3);
-            this.panel1.Controls.Add(this.GroupBox2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 237);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(660, 185);
-            this.panel1.TabIndex = 9;
-            // 
             // frmAddEditStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,7 +461,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddEditStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

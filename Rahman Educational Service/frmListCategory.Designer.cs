@@ -238,7 +238,7 @@
             this.ClientSize = new System.Drawing.Size(879, 625);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

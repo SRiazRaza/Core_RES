@@ -166,7 +166,7 @@
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.GroupBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSelectProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

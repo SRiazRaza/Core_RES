@@ -38,7 +38,7 @@ namespace Rahman_Educational_Service
         {
             try
             {
-                SQLConn.sqL = "SELECT S.ProductNo, Description, SUM(Quantity) as Quantity, DateIn FROM Product as P, StockIn as S WHERE S.ProductNo = P.ProductNo AND DATE_FORMAT(STR_TO_DATE(DateIN, '%m-%d-%Y'), '%Y-%m-%d') BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.ToString("yyyy-MM-dd") + "' GROUP BY P.ProductNo, DateIN ORDER BY DateIn, Description";
+                SQLConn.sqL = "SELECT S.ProductNo, Description, SUM(Quantity) as Quantity, DateIn FROM Product as P, StockIn as S WHERE S.ProductNo = P.ProductNo AND DATE_FORMAT(STR_TO_DATE(DateIN, '%m/%d/%Y'), '%Y-%m-%d') BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.ToString("yyyy-MM-dd") + "' GROUP BY P.ProductNo, DateIN ORDER BY DateIn, Description";
                 SQLConn.ConnDB();
                 SQLConn.cmd = new MySqlCommand(SQLConn.sqL, SQLConn.conn);
                 SQLConn.da = new MySqlDataAdapter(SQLConn.cmd);

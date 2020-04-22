@@ -57,18 +57,20 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.lbluser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel7 = new System.Windows.Forms.Panel();
             timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -93,9 +95,10 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 95);
+            this.panel1.Size = new System.Drawing.Size(245, 113);
             this.panel1.TabIndex = 21;
             // 
             // label5
@@ -166,9 +169,10 @@
             this.panel2.Controls.Add(this.btnStaff);
             this.panel2.Controls.Add(this.btnDailySales);
             this.panel2.Controls.Add(this.btnStocksReport);
-            this.panel2.Location = new System.Drawing.Point(0, 91);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 113);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(247, 521);
+            this.panel2.Size = new System.Drawing.Size(245, 512);
             this.panel2.TabIndex = 22;
             // 
             // button8
@@ -196,9 +200,10 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(82)))), ((int)(((byte)(112)))));
-            this.panel5.Location = new System.Drawing.Point(0, 3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(19, 502);
+            this.panel5.Size = new System.Drawing.Size(19, 510);
             this.panel5.TabIndex = 13;
             // 
             // button7
@@ -366,10 +371,11 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button3);
-            this.panel3.Location = new System.Drawing.Point(249, 0);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(245, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(726, 62);
+            this.panel3.Size = new System.Drawing.Size(729, 62);
             this.panel3.TabIndex = 23;
             // 
             // button1
@@ -451,14 +457,33 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.chart1);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.ForeColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(249, 59);
+            this.panel4.Location = new System.Drawing.Point(245, 62);
             this.panel4.Margin = new System.Windows.Forms.Padding(1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(726, 538);
+            this.panel4.Size = new System.Drawing.Size(729, 563);
             this.panel4.TabIndex = 24;
+            // 
+            // chart1
+            // 
+            this.chart1.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Emboss;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "POS";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(727, 513);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // panel6
             // 
@@ -466,9 +491,10 @@
             this.panel6.Controls.Add(this.lblDateTime);
             this.panel6.Controls.Add(this.lbluser);
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Location = new System.Drawing.Point(-1, 489);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 513);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(726, 48);
+            this.panel6.Size = new System.Drawing.Size(727, 48);
             this.panel6.TabIndex = 1;
             // 
             // lblDateTime
@@ -504,34 +530,27 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "User :";
             // 
-            // chart1
+            // panel7
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(29, 26);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "POS";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(647, 427);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.panel7.Controls.Add(this.panel2);
+            this.panel7.Controls.Add(this.panel1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(245, 625);
+            this.panel7.TabIndex = 2;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(974, 597);
+            this.ClientSize = new System.Drawing.Size(974, 625);
             this.ControlBox = false;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -542,9 +561,10 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -578,6 +598,7 @@
         private System.Windows.Forms.Label lbluser;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel7;
     }
 }
 

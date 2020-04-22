@@ -239,7 +239,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.Panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDatabaseConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

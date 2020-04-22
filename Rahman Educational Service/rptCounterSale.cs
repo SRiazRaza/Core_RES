@@ -40,11 +40,11 @@ namespace Rahman_Educational_Service
             {
                 if (find == "")
                 {
-                    SQLConn.sqL = "SELECT t.InvoiceNo,TDate,AccType,AccNo,td.ProductNo,Description,ItemPrice,SUM(TD.Quantity) as totalQuantity,Discount,perItem from transactions as t,transactiondetails as td,product as p  where p.ProductNo = td.ProductNo AND td.InvoiceNo = t.InvoiceNo AND AccType= '" + a + "' AND  DATE_FORMAT(STR_TO_DATE(TDate, '%m-%d-%Y'), '%Y-%m-%d') BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.ToString("yyyy-MM-dd") + "' GROUP BY AccType, T.InvoiceNo,P.ProductNo ORDER By AccNo";
+                    SQLConn.sqL = "SELECT t.InvoiceNo,TDate,AccType,AccNo,td.ProductNo,Description,ItemPrice,SUM(TD.Quantity) as totalQuantity,Discount,perItem from transactions as t,transactiondetails as td,product as p  where p.ProductNo = td.ProductNo AND td.InvoiceNo = t.InvoiceNo AND AccType= '" + a + "' AND  DATE_FORMAT(STR_TO_DATE(TDate, '%m/%d/%Y'), '%Y-%m-%d') BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.ToString("yyyy-MM-dd") + "' GROUP BY AccType, T.InvoiceNo,P.ProductNo ORDER By AccNo";
                 }
                 else
                 {
-                    SQLConn.sqL = "SELECT t.InvoiceNo,TDate,AccType,AccNo,td.ProductNo,Description,ItemPrice,SUM(TD.Quantity) as totalQuantity,Discount,perItem from transactions as t,transactiondetails as td,product as p  where p.ProductNo = td.ProductNo AND td.InvoiceNo = t.InvoiceNo AND AccType= '" + a + "' AND AccNo='" + find + "' AND DATE_FORMAT(STR_TO_DATE(TDate, '%m-%d-%Y'), '%Y-%m-%d') BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.ToString("yyyy-MM-dd") + "' GROUP BY AccType, T.InvoiceNo,P.ProductNo ORDER By AccNo";
+                    SQLConn.sqL = "SELECT t.InvoiceNo,TDate,AccType,AccNo,td.ProductNo,Description,ItemPrice,SUM(TD.Quantity) as totalQuantity,Discount,perItem from transactions as t,transactiondetails as td,product as p  where p.ProductNo = td.ProductNo AND td.InvoiceNo = t.InvoiceNo AND AccType= '" + a + "' AND AccNo='" + find + "' AND DATE_FORMAT(STR_TO_DATE(TDate, '%m/%d%Y'), '%Y-%m-%d') BETWEEN '" + StartDate.ToString("yyyy-MM-dd") + "' AND '" + EndDate.ToString("yyyy-MM-dd") + "' GROUP BY AccType, T.InvoiceNo,P.ProductNo ORDER By AccNo";
 
 
                 }

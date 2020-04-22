@@ -68,7 +68,7 @@ namespace Rahman_Educational_Service
                 SQLConn.sqL = "SELECT * FROM Staff WHERE Username = '" + txtusername.Text + "' AND UPassword = '" + txtPassword.Text + "'";
                 SQLConn.ConnDB();
                 SQLConn.cmd = new MySqlCommand(SQLConn.sqL, SQLConn.conn);
-                MessageBox.Show(SQLConn.sqL.ToString());
+               // MessageBox.Show(SQLConn.sqL.ToString());
                 SQLConn.dr = SQLConn.cmd.ExecuteReader();
 
                 if (SQLConn.dr.Read() == true)
